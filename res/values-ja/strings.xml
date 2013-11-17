@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">子供数学</string>
+    <string name="main_menu_title">子供数学</string>
+    
+    <string name="menu_addition">たしざん</string>
+    <string name="menu_subtraction">ひきざん</string>
+    <string name="menu_same_shape">同じ図形</string>
+    <string name="menu_count_num">いくつですか。</string>
+    
+    <string name="menu_subtraction_select">引き算問題選択</string>
+    <string name="menu_addition_selecti">加算問題の選択</string>
+
+</resources>

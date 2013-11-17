@@ -1,0 +1,224 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sameShape_root_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".SameShapeActivity" 
+    android:orientation="vertical"
+    android:background="@color/white">
+    <com.google.ads.AdView
+        xmlns:ads = "http://schemas.android.com/apk/lib/com.google.ads"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adUnitId="a151b7d316a5c1d"
+        ads:adSize="SMART_BANNER"
+        ads:testDevices="TEST_EMULATOR, TEST_DEVICE_ID"
+        />
+ <!-- Title Bar -->   
+    <LinearLayout 
+        android:id="@+id/sameShape_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+        
+        <ImageView
+            android:id="@+id/sameShape_goto_home_menu"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/goto_menu" 
+            android:clickable="true"
+            android:background="@drawable/bg_clickable_light"
+            android:onClick="onClickEvent"/>
+        <TextView
+            android:id="@+id/sameShape_practice_title"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+        <TextView
+            android:id="@+id/sameShape_practice_score"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="0"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+    
+<!--Question  -->
+    <LinearLayout 
+        android:id="@+id/sameShape_question_container"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="23"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="20"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+            <View 
+                android:id="@+id/sameShape_questionLeft"
+                android:layout_width="0px"
+                android:layout_height="1sp"
+                android:layout_weight="5"/>
+             <LinearLayout 
+                android:id="@+id/sameShape_question_bg"
+	            android:layout_width="0px"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="63"
+	            android:background="@drawable/bg_question"
+	            android:orientation="horizontal">
+	            <ImageView
+	                android:id="@+id/sameShape_question"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:layout_margin="@dimen/padding"
+	                android:scaleType="fitCenter"
+	                android:src="@drawable/menu_addition"
+	                />
+            </LinearLayout> 
+            
+               
+            <View 
+                android:id="@+id/sameShape_questionRight"
+                android:layout_width="0px"
+                android:layout_height="1sp"
+                android:layout_weight="5"/>
+            
+        </LinearLayout>
+
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="3"
+            android:background="@android:color/white"
+            android:orientation="horizontal"/>
+        
+        
+    </LinearLayout>
+    
+<!-- Answer -->
+    <LinearLayout 
+        android:id="@+id/sameShape_answer_container"
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="15"
+        android:background="@color/practice_example_color"
+        android:orientation="vertical">
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="2"
+            android:background="@color/transparent"
+            android:orientation="horizontal"/>
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="11"
+            android:background="@color/transparent"
+            android:orientation="horizontal">
+            <View 
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="5"
+                android:background="@color/transparent"/>
+            
+            <LinearLayout 
+                android:id="@+id/sameShape_answer_1_bg"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="19"
+                android:orientation="vertical">
+                <ImageView
+	                android:id="@+id/sameShape_answer_1"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:layout_gravity="center"
+	                android:layout_margin="@dimen/padding"
+	                android:scaleType="fitCenter"
+	                android:clickable="true"
+	                android:background="@drawable/bg_clickable_light"
+	                android:onClick="onClickEvent"/>
+                
+            </LinearLayout>
+
+            <View 
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@color/transparent"/>
+            
+            <LinearLayout 
+                android:id="@+id/sameShape_answer_2_bg"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="19"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/sameShape_answer_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/padding"
+                    android:scaleType="fitCenter"
+                    android:clickable="true"
+                    android:background="@drawable/bg_clickable_light"
+                    android:onClick="onClickEvent"/>
+            </LinearLayout>
+          
+            <View 
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@color/transparent"/>
+            
+            <LinearLayout 
+                android:id="@+id/sameShape_answer_3_bg"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="19"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/sameShape_answer_3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/padding"
+                    android:scaleType="fitCenter"
+                    android:clickable="true"
+                    android:background="@drawable/bg_clickable_light"
+                    android:onClick="onClickEvent"/>
+            </LinearLayout>
+            <View 
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="5"
+                android:background="@color/transparent"/>
+                        
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="2"
+            android:background="@color/transparent"
+            android:orientation="horizontal"/>
+    </LinearLayout>
+
+</LinearLayout>
+

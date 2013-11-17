@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Math Kinder</string>
+    <string name="main_menu_title">Math Kinder</string>
+    
+    <string name="menu_addition">Zusatz</string>
+    <string name="menu_subtraction">Subtraktion</string>
+    <string name="menu_same_shape">Gleiche Form</string>
+    <string name="menu_count_num">Wie viele?</string>
+    
+    <string name="menu_subtraction_select">Wählen Subtraktion Art</string>
+    <string name="menu_addition_selecti">Wählen Additionstyp</string>
+
+</resources>

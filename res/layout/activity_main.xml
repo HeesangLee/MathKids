@@ -1,0 +1,410 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="true"
+    android:orientation="horizontal" 
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/main_left_margin"
+        android:layout_width="0px"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:gravity="fill_vertical"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+    <!-- Main contents layout below. -->
+    <LinearLayout
+        android:id="@+id/main_center_contents"
+        android:layout_width="0px"
+        android:layout_height="fill_parent"
+        android:layout_weight="16"
+        android:orientation="vertical" 
+        android:background="@color/transparent">
+
+        <LinearLayout
+            android:id="@+id/mainMenuTile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="9"
+            android:baselineAligned="true"
+            android:orientation="horizontal" >
+            <TextView
+	            android:id="@+id/mainMenuTitle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="fill_parent"
+	            android:gravity="left|center_vertical"
+	            android:text="@string/main_menu_title"
+	            android:textAllCaps="false"
+	            android:textColor="@color/main_title_textcolor"
+	            android:textSize="@dimen/main_title_textsize"
+	            android:textStyle="bold" 
+	            android:clickable="true"
+	            android:onClick="justClickOn"/>
+            <ImageView 
+                android:id="@+id/mainMenuTitleAnimation"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:scaleType="fitEnd"/>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/addition"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="14"
+            android:baselineAligned="true"
+            android:background="@color/addition_theme_color"
+            android:orientation="horizontal" >
+            
+            <LinearLayout
+                android:id="@+id/addition_left"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_clickable_light"
+                android:clickable="true"
+                android:orientation="vertical" 
+                android:onClick="selectSubMenu">
+
+                <ImageView
+                    android:id="@+id/addition_menu_img"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0px"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="6"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/menu_addition"/>
+
+                <TextView
+                    android:id="@+id/menuTextAddition"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/menu_addition"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/main_menu_texsize" />
+
+            </LinearLayout>
+			
+            <LinearLayout 
+                android:id="@+id/addition_right"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/sub_menu_add_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/submenu_add_type_1"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/main_menu_texsize" 
+                    android:background="@drawable/bg_clickable_light"
+                    android:clickable="true"
+                    android:onClick="goMathPractice"/>
+
+                <TextView
+                    android:id="@+id/sub_menu_add_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/submenu_add_type_2"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/main_menu_texsize" 
+                    android:background="@drawable/bg_clickable_light"
+                    android:clickable="true"
+                    android:onClick="goMathPractice"/>
+            </LinearLayout>
+            </LinearLayout>
+
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@color/transparent"/>
+
+        <LinearLayout
+            android:id="@+id/subtraction"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="14"
+            android:background="@color/subtraction_theme_color"
+            android:orientation="horizontal" >
+        
+            <LinearLayout 
+                android:id="@+id/subtraction_left"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_clickable_light"
+                android:clickable="true"
+                android:orientation="vertical" 
+                android:onClick="selectSubMenu">
+
+                <ImageView
+                    android:id="@+id/subtraction_menu_img"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0px"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="6"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/menu_subtraction" />
+
+                <TextView
+                    android:id="@+id/menuTextAddition"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/menu_subtraction"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/main_menu_texsize" />
+
+            </LinearLayout>
+            <LinearLayout 
+                android:id="@+id/subtraction_right"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/sub_menu_sub_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/submenu_sub_type_1"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/main_menu_texsize" 
+                    android:background="@drawable/bg_clickable_light"
+                    android:clickable="true"
+                    android:onClick="goMathPractice"/>
+
+                <TextView
+                    android:id="@+id/sub_menu_sub_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/submenu_sub_type_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/main_menu_texsize" 
+                    android:background="@drawable/bg_clickable_light"
+                    android:clickable="true"
+                    android:onClick="goMathPractice"/>
+            </LinearLayout>
+            
+        </LinearLayout>
+
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@color/transparent"/>
+
+        <LinearLayout
+            android:id="@+id/same_shape"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="14"
+            android:background="@color/same_shape_color"
+            android:orientation="horizontal" >
+        
+            <LinearLayout 
+                android:id="@+id/same_shape_left"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_clickable_light"
+                android:clickable="true"
+                android:onClick="goMathPractice"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/same_shape_menu_img"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0px"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="6"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/menu_same_shape" />
+
+                <TextView
+                    android:id="@+id/menuSameShape"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/menu_same_shape"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/main_menu_texsize" />
+
+            </LinearLayout>
+            <LinearLayout 
+                android:id="@+id/same_shape_right"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_clickable_light"
+                android:clickable="true"
+                android:onClick="goMathPractice"
+                android:orientation="vertical" >
+                <View 
+		            android:layout_width="match_parent"
+		            android:layout_height="0px"
+		            android:layout_weight="1"
+		            android:background="@color/transparent"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/white_go_arrow" />
+                <View 
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"/>
+    
+            </LinearLayout>
+            
+        </LinearLayout>
+
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@color/transparent"/>
+
+        <LinearLayout
+            android:id="@+id/count_num"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="14"
+            android:background="@color/count_num_color"
+            android:orientation="horizontal" >
+        
+            <LinearLayout 
+                android:id="@+id/count_num_left"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_clickable_light"
+                android:clickable="true"
+                android:onClick="goMathPractice"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/count_num_menu_img"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0px"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="6"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/menu_count_num" />
+
+                <TextView
+                    android:id="@+id/count_num_menu_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/menu_count_num"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/main_menu_texsize" />
+
+            </LinearLayout>
+            <LinearLayout 
+                android:id="@+id/count_num_right"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_clickable_light"
+                android:clickable="true"
+                android:onClick="goMathPractice"
+                android:orientation="vertical" >
+                <View 
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/white_go_arrow" />
+                <View 
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"/>
+    
+            </LinearLayout>
+            </LinearLayout>
+
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="2"
+            android:background="@color/transparent"/>
+        
+    </LinearLayout> 
+    
+    <LinearLayout
+        android:id="@+id/main_right_margin"
+        android:layout_width="0px"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" 
+        android:background="@color/transparent">
+    </LinearLayout>
+
+</LinearLayout>

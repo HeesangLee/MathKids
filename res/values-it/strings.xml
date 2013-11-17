@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kids Math</string>
+    <string name="main_menu_title">Kids Math</string>
+    
+    <string name="menu_addition">Aggiunta</string>
+    <string name="menu_subtraction">Sottrazione</string>
+    <string name="menu_same_shape">Stessa forma</string>
+    <string name="menu_count_num">Quanti sono?</string>
+    
+    <string name="menu_subtraction_select">Selezionare il tipo di sottrazione.</string>
+    <string name="menu_addition_selecti">Selezionare il tipo di aggiunta.</string>
+
+</resources>

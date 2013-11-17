@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MathKids</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="main_menu_title">Math Kids</string>
+    <string name="menu_addition">Addition</string>
+    <string name="menu_subtraction">Subtraction</string>
+    <string name="menu_make10">Make Ten</string>
+    <string name="menu_same_shape">Same shape</string>
+    <string name="menu_count_num">How many?</string>
+    <string name="menu_about">About</string>
+    <string name="submenu_add_type_1">A + B = ?</string>
+    <string name="submenu_add_type_2">A + ? = B</string>
+    <string name="submenu_sub_type_1">A - B = ?</string>
+    <string name="submenu_sub_type_2">A - ? = B</string>
+    <string name="submenu_make10">A + ? = 10</string>
+    <string name="about_description">Practice basic mathmatics with Math Kids app.\nEnjoy this application and your Life</string>
+    <string name="title_activity_math_practice">Math Practice Activity</string>
+    <string name="title_activity_pop_up_sub_menu">PopUpSubMenu</string>
+    <string name="menu_subtraction_select">Select subtraction type</string>
+    <string name="menu_addition_selecti">Select addition type</string>
+    <string name="title_activity_same_shape">SameShapeActivity</string>
+    <string name="title_activity_popup_ok_ng">PopupOkNg</string>
+
+</resources>

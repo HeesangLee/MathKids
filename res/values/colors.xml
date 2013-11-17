@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name = "main_title_textcolor">#ff000000</color>
+    <color name = "addition_theme_color">#ffd40000</color>
+    <color name = "subtraction_theme_color">#ff217821</color>
+    <color name = "make10_theme_color">#ff0044aa</color>
+    <color name = "same_shape_color">#ff0044aa</color>
+    <color name = "about_theme_color">#ff8800aa</color>
+    <color name = "count_num_color">#ff8800aa</color>
+    <color name = "practice_example_color">#fff2f2f2</color>
+    <color name = "white">#ffffffff</color>
+    <color name = "popupSubText">#ff101010</color>
+    <color name = "transparent">#00ffffff</color>
+    <color name = "wrongAnswer">#ffd5d5d5</color>
+    <color name = "popupSubBg">#35000000</color>
+    <color name = "yellow">#ffffff00</color>
+</resources>
