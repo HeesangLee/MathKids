@@ -331,15 +331,15 @@ public class MathPracticeActivity extends Activity {
 		this.tvQuestion.startAnimation(animNextQuestion);
 	}
 	public void onClickEvent(View view){
-		if(++this.adOnCount>Math.round(Math.random()*3)){
+//		if(++this.adOnCount>Math.round(Math.random()*3)){
 			if (AD_ON && this.flagAdOn==false) {
 	        	AdRequest adrequest = new AdRequest();
-	        	adrequest.setGender(AdRequest.Gender.FEMALE);
+//	        	adrequest.setGender(AdRequest.Gender.FEMALE);
 	        	adView = (AdView) findViewById(R.id.adView);
 	            adView.loadAd(adrequest);
 	            this.flagAdOn = true;
 	        }
-		}
+//		}
 		switch(view.getId()){//put Extra here.
 		case R.id.goto_home_menu: // go to home menu activity.
 			goToHomeMenuActivity();

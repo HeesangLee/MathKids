@@ -1,11 +1,14 @@
 package dalcoms.pub.mathkids;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -41,6 +44,68 @@ public class MainActivity extends Activity {
         initActivity();
 
 	}
+	
+	@Override
+	public void onBackPressed(){
+		if (Math.random()<0.8){
+			popUpExtiMessageDlg();
+		}else{
+			popUpAdMsgDlg();
+		}
+	}
+	
+	private void popUpExtiMessageDlg(){
+		AlertDialog.Builder dlgBackPressed = new AlertDialog.Builder(this);
+		dlgBackPressed.setMessage(R.string.say_good_bye)
+		.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				System.exit(0);
+			}
+		})
+		.setNegativeButton("No", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.cancel();
+			}
+		})
+		.setTitle("Exit")
+		.setIcon(R.drawable.mathkids_ico)
+		.show();
+	}
+	private void popUpAdMsgDlg(){
+		AlertDialog.Builder dlgBackPressed = new AlertDialog.Builder(this);
+		dlgBackPressed.setMessage(R.string.advertize_myself)
+		.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				try{
+					startActivity(
+							new Intent(Intent.ACTION_VIEW,
+									Uri.parse("market://search/?q=pub:Dalcoms")));
+				}catch(android.content.ActivityNotFoundException e){
+					startActivity(
+							new Intent(Intent.ACTION_VIEW,
+									Uri.parse("https://play.google.com/store/search?q=dalcoms")));
+				}
+			}
+		})
+		.setNegativeButton("No", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.cancel();
+				popUpExtiMessageDlg();
+			}
+		})
+		.setTitle("Free app")
+		.setIcon(R.drawable.mathkids_ico)
+		.show();
+	}
+	
 	protected void initActivity(){
 		rootStartAnim();
 		this.tvMainMenuTitle = (TextView) findViewById(R.id.mainMenuTitle);

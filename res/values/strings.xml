@@ -23,5 +23,7 @@
     <string name="menu_addition_selecti">Select addition type</string>
     <string name="title_activity_same_shape">SameShapeActivity</string>
     <string name="title_activity_popup_ok_ng">PopupOkNg</string>
+    <string name="say_good_bye">Do you really want to exit?</string>
+    <string name="advertize_myself">More free app?</string>
 
 </resources>

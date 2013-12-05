@@ -253,6 +253,7 @@ public final class R {
     public static final class string {
         public static final int about_description=0x7f07000f;
         public static final int action_settings=0x7f070001;
+        public static final int advertize_myself=0x7f070017;
         public static final int app_name=0x7f070000;
         public static final int hello_world=0x7f070002;
         public static final int main_menu_title=0x7f070003;
@@ -264,6 +265,7 @@ public final class R {
         public static final int menu_same_shape=0x7f070007;
         public static final int menu_subtraction=0x7f070005;
         public static final int menu_subtraction_select=0x7f070012;
+        public static final int say_good_bye=0x7f070016;
         public static final int submenu_add_type_1=0x7f07000a;
         public static final int submenu_add_type_2=0x7f07000b;
         public static final int submenu_make10=0x7f07000e;

@@ -424,10 +424,10 @@ public class SameShapeActivity extends Activity {
 		this.ivQuestion.startAnimation(animNextQuestion);
 	}
 	public void onClickEvent(View view){
-		if(++this.adOnCount>Math.round(Math.random()*3)){
+//		if(++this.adOnCount>Math.round(Math.random()*3)){
 			if (AD_ON && this.flagAdOn==false) {
 	        	AdRequest adrequest = new AdRequest();
-	        	adrequest.setGender(AdRequest.Gender.FEMALE);
+//	        	adrequest.setGender(AdRequest.Gender.FEMALE);
 	        	adView = (AdView) findViewById(R.id.adView);
 	            adView.loadAd(adrequest);
 	            this.flagAdOn = true;
@@ -435,7 +435,7 @@ public class SameShapeActivity extends Activity {
 //	            prepareCntNumQuestion();
 	        }
 			
-		}
+//		}
 		
 		switch(view.getId()){//put Extra here.
 		case R.id.sameShape_goto_home_menu: // go to home menu activity.
